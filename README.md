@@ -15,7 +15,7 @@ Use `npm install -g truffle` to install the Truffle package globally, or remove 
 (view the repo [here](https://github.com/trufflesuite/truffle))
 
 
-#### 3. Download Ganache
+#### 3. Download and Install Ganache
 Download [here](https://www.trufflesuite.com/ganache)
 (view the repo [here](https://github.com/trufflesuite/ganache))
 
