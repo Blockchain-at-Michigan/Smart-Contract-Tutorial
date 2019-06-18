@@ -12,7 +12,6 @@ a beginner's tutorial for creating and deploying a simple smart contract using t
 
 #### 2. Install Truffle
 Use `npm install -g truffle` to install the Truffle package globally, or remove the tag to install locally
-
 *View the repo [here](https://github.com/trufflesuite/truffle)*
 
 
