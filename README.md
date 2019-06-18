@@ -20,4 +20,8 @@ Download [here](https://www.trufflesuite.com/ganache)
 (view the repo [here](https://github.com/trufflesuite/ganache))
 
 
-#### 4. Download the starter code
+#### 4. Download the starter code and fill out the functions
+(clone this repository)
+
+
+#### 5. Debug your code using Remix
