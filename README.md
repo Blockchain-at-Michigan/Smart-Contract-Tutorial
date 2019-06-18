@@ -23,6 +23,7 @@ a beginner's tutorial for creating and deploying a simple smart contract using t
 #### 4. Download the starter code and fill out the functions
 - Clone this repository
 - *If you like to develop in Visual Studio Code, you can download [this extension](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) for Solidity support*
+- *If you like to develop in Atom, you can download [this extension](https://github.com/0mkara/etheratom) for Solidity support*
 
 
 #### 5. Debug your code using Remix
