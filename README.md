@@ -31,3 +31,6 @@ a beginner's tutorial for creating and deploying a simple smart contract using t
 
 
 #### 6. Test your smart contract using Truffle and Ganache
+- Set up a project with Truffle
+- Deploy your project to a local blockchain using Ganache
+- Test your smart contract in the Truffle console
