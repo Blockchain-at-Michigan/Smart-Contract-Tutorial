@@ -7,7 +7,7 @@ pragma solidity ^0.5.0;
 contract SourceTracker 
 {
 	string internal ProductName;
-	uint internal NumItemsOriginal;  // how many total items were sent out from source
+	uint internal NumItemsOriginal;  // how many total items should be in the shipment
 	uint internal NumNodes;  // number of nodes in the supply chain
 	
 	struct Node
@@ -19,21 +19,25 @@ contract SourceTracker
 		bool PerfectCondition;  // true if all items received are in perfect condition
 	}
 
-	Node[] internal Chain;
+	Node[] internal SupplyChain;
 	mapping (string => uint) internal BusinessNameLookup;  // maps name of business to the index its node in the chain array
 
+	// when a new node is added to the supply chain
 	event NewNode
 	(
 		string BusinessName,
 		uint NumItemsReceived
 	);
 
+	// when a new node is added to the supply chain and reports imperfect items
 	event ProductDamage
 	(
 		string BusinessName,
 		uint NodeIndex
 	);
 
+	// @param the name of the product
+	// @param the total number of items that are expected in the shipment
 	constructor (string memory productName, uint memory numItemsOriginal) 
 	external
 	{
@@ -42,6 +46,11 @@ contract SourceTracker
 		NumNodes = 0;
 	}
 
+	// adds a new node to the end of the supply chain
+	// @param the name of the business representing this node
+	// @param the date that this node received the shipment
+	// @param the total number of items received in this shipment at this node
+	// @param whether every item in the shipment was in perfect condition
 	function AddNode
 	(
 		string memory businessName,
@@ -52,7 +61,7 @@ contract SourceTracker
 	external
 	{
 		// push new struct into array
-		Chain.push(Node(businessName, dateReceived, numItemsReceived, NumNodes, perfectCondition));
+		SupplyChain.push(Node(businessName, dateReceived, numItemsReceived, NumNodes, perfectCondition));
 		
 		// update BusinessNameLookup mapping
 		BusinessNameLookup[businessName] = NumNodes;
@@ -70,6 +79,7 @@ contract SourceTracker
 		++NumNodes;
 	}
 
+	// @returns the name of the product for which this smart contract is the supply chain
 	function GetProductName()
 	external
 	view
@@ -78,6 +88,7 @@ contract SourceTracker
 		return ProductName;
 	}
 
+	// @returns the total number of items that should be in the shipment
 	function GetOriginalNumberOfItems()
 	external
 	view
@@ -86,6 +97,7 @@ contract SourceTracker
 		return NumItemsOriginal;
 	}
 
+	// @returns the number of nodes in the supply chain
 	function GetNumberOfNodes()
 	external
 	view
@@ -94,6 +106,9 @@ contract SourceTracker
 		return NumNodes;
 	}
 
+	// finds the first node to report damage
+	// @returns the name of a business in the supply chain 
+	// or an empty string if no damage has been reported
 	function FindDamage()
 	external
 	view
