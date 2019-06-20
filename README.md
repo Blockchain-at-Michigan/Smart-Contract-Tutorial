@@ -5,18 +5,20 @@ a beginner's tutorial for creating and deploying a simple smart contract using t
 
 
 ### 1.   Install Node.js
+Node.js is a JavaScript run-time environment required for using Truffle.
 - If you don't have homebrew, [download the installer](https://nodejs.org/en/download/) and make sure it's on your `$PATH`
 (if you run into problems with multiple versions, [download nvm](https://github.com/nvm-sh/nvm#installation-and-update))
 - Or [use homebrew](https://changelog.com/posts/install-node-js-with-homebrew-on-os-x)
 
 
 ### 2.   Install Truffle
+The Truffle Suite is a development environment for blockchains using the Ethereum Virtual Machine.
 - Use `npm install -g truffle` to install the Truffle package globally, or remove the tag to install locally
 - *View the repo [here](https://github.com/trufflesuite/truffle)*
 
 
 ### 3.   Download and Install Ganache
-- Download [here](https://www.trufflesuite.com/ganache)
+[Ganache](https://www.trufflesuite.com/ganache) is a personal blockchain for Ethereum development that allows you to test locally and much faster than major testnets like Ropsten and Rinkeby.
 - *View the repo [here](https://github.com/trufflesuite/ganache)*
 
 
@@ -28,7 +30,7 @@ The Source Tracker smart contract represents a simplified supply chain for a giv
 
 
 ### 5.   Debug your code using Remix
-- [Remix](https://remix.ethereum.org) is a web-based compiler/IDE that is one of the best options for testing your smart contracts with the compiler of your choice
+[Remix](https://remix.ethereum.org) is a web-based compiler/IDE that is one of the best options for testing your smart contracts with the compiler of your choice
 - *View the documentation [here](https://remix.readthedocs.io/en/latest/#)*
 
 
