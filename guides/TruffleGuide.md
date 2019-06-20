@@ -11,7 +11,7 @@ Setting Up a New Truffle Project
 
 #### 3. Edit your truffle-config.js file
 Open truffle-config.js or truffle.js (located in the SourceTracker directory). Paste the following code under networks to tell Truffle to connect to Ganache:
-```
+```javascript
 development: {
   host: "localhost",
   port: 7545,    
@@ -19,7 +19,7 @@ development: {
 },
 ```
 And the following code under compilers to tell Truffle what compiler version you want to use:
-```
+```javascript
 solc: {
   version: "0.5.0",
   settings: {     
@@ -41,7 +41,7 @@ Drag and drop SourceTracker.sol into SourceTracker/contracts
 `touch migrations/2_salmon_migration.js`
 
 In 2_salmon_migration.js, paste the following code:
-```
+```javascript
 var Salmon = artifacts.require("SourceTracker");
 
 module.exports = function(deployer)
