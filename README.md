@@ -36,8 +36,7 @@ The Source Tracker smart contract represents a simplified supply chain for a giv
 
 
 ### 6.   Test your smart contract using Truffle and Ganache
-- [Set up a new Truffle project](./guides/TruffleGuide.md)
-- [Deploy your project to a local blockchain using Ganache](./guides/DeployGuide.md)
+- [Deploy your contracts](./guides/DeployGuide.md)
 - [Test your smart contract with Truffle](./guides/TestGuide.md)
 - *Check out Truffle's [documentation](https://www.trufflesuite.com/docs/truffle/overview) for a more comprehensive description of its capabilities*
 
