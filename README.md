@@ -18,7 +18,8 @@ The Truffle Suite is a development environment for blockchains using the Ethereu
 
 
 ### 3.   Download and Install Ganache
-[Ganache](https://www.trufflesuite.com/ganache) is a personal blockchain for Ethereum development that allows you to test locally and much faster than major testnets like Ropsten and Rinkeby.
+Ganache is a personal blockchain for Ethereum development that allows you to test locally and much faster than major testnets like Ropsten and Rinkeby.
+- [Download](https://www.trufflesuite.com/ganache)
 - *[Check out the repo](https://github.com/trufflesuite/ganache)*
 
 
