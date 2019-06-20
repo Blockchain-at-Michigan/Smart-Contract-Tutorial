@@ -10,7 +10,7 @@ Setting Up a New Truffle Project
 `truffle init`
 
 #### 3. Edit your truffle-config.js file
-Open truffle-config.js or truffle.js (located in the SourceTracker directory). Paste the following code under networks to tell Truffle to connect to Ganache:
+Open truffle-config.js or truffle.js (located in the SourceTracker directory). Paste the following code under "Networks:" to tell Truffle to connect to Ganache:
 ```javascript
 development: {
   host: "localhost",
@@ -18,7 +18,7 @@ development: {
 	network_id: "*",
 },
 ```
-And the following code under compilers to tell Truffle what compiler version you want to use:
+And the following code under "Compilers:" to tell Truffle what compiler version you want to use:
 ```javascript
 solc: {
   version: "0.5.0",
