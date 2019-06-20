@@ -20,7 +20,7 @@ a beginner's tutorial for creating and deploying a simple smart contract using t
 - *View the repo [here](https://github.com/trufflesuite/ganache)*
 
 
-### 4.   Download the [starter code](./starter\ code/SourceTracker.sol) and fill out the functions
+### 4.   Download the [starter code](./starter/SourceTracker.sol) and fill out the functions
 The Source Tracker smart contract represents a simplified supply chain for a given product shipment. Each time the shipment arrives at a new node in the supply chain, the contract adds another "node" to its supply chain array. On a larger scale, this example shows how blockchain can be used along with IoTs to make supply chains more safe and transparent.
 - Here's a [list of functions](./guides/ImplementationGuide.md) that need to be implemented
 - *If you like to develop in Visual Studio Code, you can download [this extension](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) for Solidity support*
