@@ -20,8 +20,9 @@ a beginner's tutorial for creating and deploying a simple smart contract using t
 - *View the repo [here](https://github.com/trufflesuite/ganache)*
 
 
-#### 4. Download the starter code and fill out the functions
-- Clone this repository
+#### 4. Download the [starter code](./starter\ code/SourceTracker.sol) and fill out the functions
+The Source Tracker smart contract represents a simplified supply chain for a given product shipment. Each time the shipment arrives at a new node in the supply chain, the contract adds another "node" to its supply chain array. On a larger scale, this example shows how blockchain can be used along with IoTs to make supply chains more safe and transparent.
+- Here's a [list of functions](./guides/ImplementationGuide.md) that need to be implemented
 - *If you like to develop in Visual Studio Code, you can download [this extension](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) for Solidity support*
 - *If you like to develop in Atom, you can download [this extension](https://github.com/0mkara/etheratom) for Solidity support*
 
@@ -32,7 +33,13 @@ a beginner's tutorial for creating and deploying a simple smart contract using t
 
 
 #### 6. Test your smart contract using Truffle and Ganache
-- Set up a project with Truffle
-- Deploy your project to a local blockchain using Ganache
-- Test your smart contract in the Truffle console
+- [Set up a new Truffle project](./guides/TruffleGuide.md)
+- [Deploy your project to a local blockchain using Ganache](./guides/DeployGuide.md)
+- [Test your smart contract with Truffle](./guides/TestGuide.md)
 - *Check out [Truffle's documentation](https://www.trufflesuite.com/docs/truffle/overview) for a more comprehensive description of its capabilities*
+
+
+#### 7. Check your code with the [solution code](./solution/SourceTracker.sol)
+
+
+#### 8. For more practice, check out Truffle's [Pet Shop Tutorial](https://www.trufflesuite.com/tutorials/pet-shop)
