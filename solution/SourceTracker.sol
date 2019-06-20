@@ -107,8 +107,7 @@ contract SourceTracker
 	}
 
 	// finds the first node to report damage
-	// @returns name of a business in the supply chain 
-	// or an empty string if no damage has been reported
+	// @returns name of a business in the supply chain or empty string
 	function FindDamage()
 	external
 	view
@@ -125,4 +124,37 @@ contract SourceTracker
 		// or return an empty string
 		return "";
 	}
+
+	// determines what date the company received their shipment
+	// @param name of a business
+	// @returns date or empty string
+	function DateBusinessReceivedShipment(string memory businessName)
+	external
+	view
+	returns (string)
+	{
+		// get index of business
+		uint memory idx = BusinessNameLookup[businessName];
+
+		// make sure returned index wasn't just a default value
+		if (idx == 0) && !compareStrings(SupplyChain[idx].BusinessName, businessName)
+		{
+			return "";
+		} else
+		{
+			return SupplyChain[idx].DateReceived;
+		}
+	}
+
+	// helper function that compares strings
+	// @param 2 strings
+	// @returns true if the strings match
+	function compareStrings(string memory a, string memory b) 
+	public 
+	view 
+	returns (bool) 
+	{
+  	return (keccak256(abi.encodePacked((a))) == keccak256(abi.encodePacked((b))) );
+	}
+
 }

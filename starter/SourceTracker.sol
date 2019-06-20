@@ -103,4 +103,27 @@ contract SourceTracker
 	{
 		// STEP 6
 	}
+
+	// determines what date the company received their shipment
+	// @param name of a business
+	// @returns date or empty string
+	function DateBusinessReceivedShipment(string memory businessName)
+	external
+	view
+	returns (string)
+	{
+		// STEP 7
+		}
+	}
+
+	// helper function that compares strings
+	// @param 2 strings
+	// @returns true if the strings match
+	function compareStrings(string memory a, string memory b) 
+	public 
+	view 
+	returns (bool) 
+	{
+  	return (keccak256(abi.encodePacked((a))) == keccak256(abi.encodePacked((b))) );
+	}
 }
