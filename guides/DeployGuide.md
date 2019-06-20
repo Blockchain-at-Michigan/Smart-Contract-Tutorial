@@ -1,4 +1,4 @@
-Setting Up a New Truffle Project
+Deploy Your Smart Contract
 ================================
 
 #### 1. Make a new directory for your Truffle project
