@@ -14,12 +14,12 @@ Node.js is a JavaScript run-time environment required for using Truffle.
 ### 2.   Install Truffle
 The Truffle Suite is a development environment for blockchains using the Ethereum Virtual Machine.
 - Use `npm install -g truffle` to install the Truffle package globally, or remove the tag to install locally
-- *View the repo [here](https://github.com/trufflesuite/truffle)*
+- *[Check out the repo](https://github.com/trufflesuite/truffle)*
 
 
 ### 3.   Download and Install Ganache
 [Ganache](https://www.trufflesuite.com/ganache) is a personal blockchain for Ethereum development that allows you to test locally and much faster than major testnets like Ropsten and Rinkeby.
-- *View the repo [here](https://github.com/trufflesuite/ganache)*
+- *[Check out the repo](https://github.com/trufflesuite/ganache)*
 
 
 ### 4.   Download the [starter code](./starter/SourceTracker.sol) and fill out the functions
@@ -31,14 +31,14 @@ The Source Tracker smart contract represents a simplified supply chain for a giv
 
 ### 5.   Debug your code using Remix
 [Remix](https://remix.ethereum.org) is a web-based compiler/IDE that is one of the best options for testing your smart contracts with the compiler of your choice
-- *View the documentation [here](https://remix.readthedocs.io/en/latest/#)*
+- *[Check out the documentation](https://remix.readthedocs.io/en/latest/#)*
 
 
 ### 6.   Test your smart contract using Truffle and Ganache
 - [Set up a new Truffle project](./guides/TruffleGuide.md)
 - [Deploy your project to a local blockchain using Ganache](./guides/DeployGuide.md)
 - [Test your smart contract with Truffle](./guides/TestGuide.md)
-- *Check out [Truffle's documentation](https://www.trufflesuite.com/docs/truffle/overview) for a more comprehensive description of its capabilities*
+- *Check out Truffle's [documentation](https://www.trufflesuite.com/docs/truffle/overview) for a more comprehensive description of its capabilities*
 
 
 ### 7.   Check your code with the [solution code](./solution/SourceTracker.sol)
