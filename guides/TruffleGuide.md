@@ -32,14 +32,13 @@ solc: {
 ```
 
 #### 4. Move your smart contract code to the contracts folder
+Drag and drop SourceTracker.sol into SourceTracker/contracts
 
 #### 5. Compile
 `truffle compile`
 
 #### 6. Make a new migrations file
-`cd migrations`
-
-`touch 2_salmon_migration.js`
+`touch migrations/2_salmon_migration.js`
 
 In 2_salmon_migration.js, paste the following code:
 ```
@@ -56,6 +55,4 @@ This specifies what contract you'd like to deploy and what its constructor param
 Open the Ganache app.
 
 #### 8. Migrate
-`cd ..`
-
 `truffle migrate`
