@@ -123,6 +123,6 @@ contract SourceTracker
 	view 
 	returns (bool) 
 	{
-  	return (keccak256(abi.encodePacked((a))) == keccak256(abi.encodePacked((b))) );
+  		return (keccak256(abi.encodePacked((a))) == keccak256(abi.encodePacked((b))) );
 	}
 }
