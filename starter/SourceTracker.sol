@@ -113,7 +113,6 @@ contract SourceTracker
 	returns (string)
 	{
 		// STEP 7
-		}
 	}
 
 	// helper function that compares strings
