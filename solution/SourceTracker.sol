@@ -38,8 +38,9 @@ contract SourceTracker
 
 	// @param name of the product
 	// @param total number of items that are expected in shipment
-	constructor (string memory productName, uint memory numItemsOriginal) 
-	external
+	// NOTE: Data location (memory, calldata, storage) can only be specified for array, struct or mapping types
+	constructor (string memory productName, uint numItemsOriginal) 
+	public
 	{
 		ProductName = productName;
 		NumItemsOriginal = numItemsOriginal;
@@ -50,7 +51,7 @@ contract SourceTracker
 	function GetProductName()
 	external
 	view
-	returns (string)
+	returns (string memory)
 	{
 		return ProductName;
 	}
@@ -78,12 +79,13 @@ contract SourceTracker
 	// @param date that this node received shipment
 	// @param total number of items received in this shipment at this node
 	// @param whether every item in the shipment was in perfect condition
+	// NOTE: Data location must be "calldata" for parameter in external function
 	function AddNode
 	(
-		string memory businessName,
-		string memory dateReceived,
-		uint memory numItemsReceived,
-		bool memory perfectCondition
+		string calldata businessName,
+		string calldata dateReceived,
+		uint numItemsReceived,
+		bool perfectCondition
 	) 
 	external
 	{
@@ -111,12 +113,12 @@ contract SourceTracker
 	function FindDamage()
 	external
 	view
-	returns (string)
+	returns (string memory)
 	{
 		// look for business that reported damage
-		for (int i = 0; i < NumNodes; ++i)
+		for (uint i = 0; i < NumNodes; ++i)
 		{
-			if !(SupplyChain[i].PerfectCondition)
+			if (!(SupplyChain[i].PerfectCondition))
 			{
 				return SupplyChain[i].BusinessName;
 			}
@@ -128,16 +130,19 @@ contract SourceTracker
 	// determines what date the company received their shipment
 	// @param name of a business
 	// @returns date or empty string
-	function DateBusinessReceivedShipment(string memory businessName)
+	function DateBusinessReceivedShipment(string calldata businessName)
 	external
 	view
-	returns (string)
+	returns (string memory)
 	{
 		// get index of business
-		uint memory idx = BusinessNameLookup[businessName];
+		uint idx = BusinessNameLookup[businessName];
 
 		// make sure returned index wasn't just a default value
-		if (idx == 0) && !compareStrings(SupplyChain[idx].BusinessName, businessName)
+		if (
+			(idx == 0) && 
+			(!compareStrings(SupplyChain[idx].BusinessName, businessName))
+		)
 		{
 			return "";
 		} else
@@ -150,8 +155,8 @@ contract SourceTracker
 	// @param 2 strings
 	// @returns true if the strings match
 	function compareStrings(string memory a, string memory b) 
-	public 
-	view 
+	internal 
+	pure
 	returns (bool) 
 	{
   	return (keccak256(abi.encodePacked((a))) == keccak256(abi.encodePacked((b))) );
