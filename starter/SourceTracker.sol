@@ -115,7 +115,6 @@ contract SourceTracker
 	returns (string memory)
 	{
 		// STEP 7
-		}
 	}
 
 	// helper function that compares strings
@@ -126,6 +125,6 @@ contract SourceTracker
 	pure
 	returns (bool) 
 	{
-  	return (keccak256(abi.encodePacked((a))) == keccak256(abi.encodePacked((b))) );
+  		return (keccak256(abi.encodePacked((a))) == keccak256(abi.encodePacked((b))) );
 	}
 }
