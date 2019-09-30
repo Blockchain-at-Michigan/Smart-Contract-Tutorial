@@ -14,6 +14,7 @@ Node.js is a JavaScript run-time environment required for using Truffle.
 ### 2.   Install Truffle
 The Truffle Suite is a development environment for blockchains using the Ethereum Virtual Machine.
 - Use `npm install -g truffle` to install the Truffle package globally, or remove the tag to install locally
+- If you're using Ubuntu on a Windows machine and the previous command won't execute, try using Powershell instead
 - *[Check out the repo](https://github.com/trufflesuite/truffle)*
 
 
